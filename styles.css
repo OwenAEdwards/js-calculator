@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: rgb(90, 90, 90);
+}
+
+#background-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#calculator {
+  background-color: black;
+  border: 10px solid black;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* 4 columns, 100px each */
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px); /* first row is 100px or auto; then 5 rows, 80px each */
+  gap: 2px;
+}
+
+#display {
+  grid-column: 1 / -1; /* the display goes from the 1st column to the last column so it takes up the whole first row */
+  background-color: black;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 5px;
+  font-size: 4.5em;
+  font-weight: initial;
+  color: #F6F5F6;
+}
+
+button {
+  border-radius: 35px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  border: 0;
+  margin: 5px;
+}
+
+.top-button {
+  background-color: #A0A0A0;
+  color: #040404;
+}
+
+.top-button:active {
+  background-color: #D9D9D9;
+}
+
+.orange-right-button {
+  background-color: #FF9500;
+}
+
+.orange-right-button:active {
+  background-color: #F3CA96;
+}
+
+.bottom-dark-gray-button {
+  background-color: #313131;
+}
+
+.bottom-dark-gray-button:active {
+  background-color: #737373;
+ }
+
+.orange-right-button, .bottom-dark-gray-button {
+  color: #F6F5F6;
+}
+
+#zero-button {
+  grid-column: span 2;
+}
